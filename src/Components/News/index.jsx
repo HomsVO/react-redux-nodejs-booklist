@@ -1,6 +1,4 @@
 import React from 'react';
-import { Route , Router , Switch} from 'react-router-dom';
-import style from './index.module.scss';
 
 class News extends React.Component {
   state = {
@@ -33,21 +31,19 @@ class News extends React.Component {
       <div className="container">
         <h1 className='mt-3'>News</h1>
         {this.state.isLoaded && 
-          <div className="container">
-            <div className="row justify-content-between">
-            {this.state.news.map((item)=>{
+            <div className="d-flex flex-wrap justify-content-between">
+            {this.state.news.map((item,index)=>{
                 return (
-                  <div class="card mt-3" style={{width:"30%"}}>
-                    <img class="card-img-top" src={item.urlToImage} alt="Card image cap" />
-                    <div class="card-body">
-                      <h5 class="card-title">{item.title}</h5>
-                      <p class="card-text">{item.description}</p>
-                      <a href={item.url} target="_blank" class="btn btn-primary">Go somewhere</a>
+                  <div key={index} className="card mt-3" style={{width:"30%"}}>
+                    <img className="card-img-top" src={item.urlToImage} alt="Card image cap" />
+                    <div className="card-body">
+                      <h5 className="card-title">{item.title}</h5>
+                      <p className="card-text">{item.description}</p>
+                      <a href={item.url} target="_blank" className="btn btn-primary">Go somewhere</a>
                     </div>
                   </div>
                 )
             })}
-            </div>
           </div>
         }
       </div>
