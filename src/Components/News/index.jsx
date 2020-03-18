@@ -7,7 +7,7 @@ class News extends React.Component {
     error:''
   }
   componentDidMount(){
-    let url = 'http://newsapi.org/v2/top-headlines?country=us&apiKey=ff38cedd9fd84e048e80bd5b1d4610db';
+    let url = 'https://newsapi.org/v2/top-headlines?country=us&apiKey=ff38cedd9fd84e048e80bd5b1d4610db';
 
     fetch(url)
     .then(res => res.json())

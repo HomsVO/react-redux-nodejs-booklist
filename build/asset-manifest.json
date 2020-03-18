@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/crud-on-react-redux-sass/build/static/css/main.5ed4a425.chunk.css",
-    "main.js": "/crud-on-react-redux-sass/build/static/js/main.d2b67ff4.chunk.js",
-    "main.js.map": "/crud-on-react-redux-sass/build/static/js/main.d2b67ff4.chunk.js.map",
+    "main.js": "/crud-on-react-redux-sass/build/static/js/main.d0da88d0.chunk.js",
+    "main.js.map": "/crud-on-react-redux-sass/build/static/js/main.d0da88d0.chunk.js.map",
     "runtime-main.js": "/crud-on-react-redux-sass/build/static/js/runtime-main.60761d77.js",
     "runtime-main.js.map": "/crud-on-react-redux-sass/build/static/js/runtime-main.60761d77.js.map",
     "static/css/2.0a74438e.chunk.css": "/crud-on-react-redux-sass/build/static/css/2.0a74438e.chunk.css",
     "static/js/2.390a2152.chunk.js": "/crud-on-react-redux-sass/build/static/js/2.390a2152.chunk.js",
     "static/js/2.390a2152.chunk.js.map": "/crud-on-react-redux-sass/build/static/js/2.390a2152.chunk.js.map",
     "index.html": "/crud-on-react-redux-sass/build/index.html",
-    "precache-manifest.7037d9002b13fdc0b73672b218cc6b74.js": "/crud-on-react-redux-sass/build/precache-manifest.7037d9002b13fdc0b73672b218cc6b74.js",
+    "precache-manifest.1cdc52f1dcd46845f4f24c258ad8a13a.js": "/crud-on-react-redux-sass/build/precache-manifest.1cdc52f1dcd46845f4f24c258ad8a13a.js",
     "service-worker.js": "/crud-on-react-redux-sass/build/service-worker.js",
     "static/css/2.0a74438e.chunk.css.map": "/crud-on-react-redux-sass/build/static/css/2.0a74438e.chunk.css.map",
     "static/css/main.5ed4a425.chunk.css.map": "/crud-on-react-redux-sass/build/static/css/main.5ed4a425.chunk.css.map",
@@ -22,6 +22,6 @@
     "static/css/2.0a74438e.chunk.css",
     "static/js/2.390a2152.chunk.js",
     "static/css/main.5ed4a425.chunk.css",
-    "static/js/main.d2b67ff4.chunk.js"
+    "static/js/main.d0da88d0.chunk.js"
   ]
 }
