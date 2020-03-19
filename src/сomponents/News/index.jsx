@@ -35,11 +35,11 @@ class News extends React.Component {
             {this.state.news.map((item,index)=>{
                 return (
                   <div key={index} className="card mt-3" style={{width:"30%"}}>
-                    <img className="card-img-top" src={item.urlToImage} alt="Card image cap" />
+                    <img className="card-img-top" src={item.urlToImage} alt="" />
                     <div className="card-body">
                       <h5 className="card-title">{item.title}</h5>
                       <p className="card-text">{item.description}</p>
-                      <a href={item.url} target="_blank" className="btn btn-primary">Go somewhere</a>
+                      <a href={item.url} target="_blank" rel="noopener noreferrer" className="btn btn-primary">Go somewhere</a>
                     </div>
                   </div>
                 )
