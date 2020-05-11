@@ -1,0 +1,9 @@
+{
+    "cfg":{
+        "kit":"dev"
+    },
+    "dev":{
+        "PORT": 8000,
+        "DBUrl": "mongodb+srv://homs:homs@cluster0-bflqz.mongodb.net/crud"
+    }
+}

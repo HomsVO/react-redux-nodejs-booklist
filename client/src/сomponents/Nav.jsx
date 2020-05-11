@@ -8,13 +8,7 @@ function Header() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto">
             <li className="nav-item">
-              <NavLink className="nav-link" activeClassName="nav-link--active" exact to="/">Main</NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" activeClassName="nav-link--active" exact to="/profile">Profile</NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" activeClassName="nav-link--active" exact to="/news">News</NavLink>
+              <NavLink className="nav-link" activeClassName="nav-link active" exact to="/">News</NavLink>
             </li>
           </ul>
         </div>

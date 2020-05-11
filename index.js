@@ -1,15 +1,30 @@
 const express = require('express');
+const mongoose = require('mongoose');
+const cfg = require('prj-cfg').getAll();
 const app = express();
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || cfg.PORT || 8000;
+
+
+app.use(express.static('client/public'));
+
+const start = async () => {
+
+    try {
+        await mongoose.connect(cfg.DBUrl, {
+            useNewUrlParser: true,
+            useUnifiedTopology: true
+            
+        });
+        app.listen(PORT, () => {
+            console.log('Server has been started on PORT:' + PORT)
+        })
+    } catch (e) {
+        console.log(e);
+    }
+
+}
+
+start();
 
 
 
-
-
-
-
-
-
-app.listen(PORT, () => {
-    console.log('Server has been started')
-})

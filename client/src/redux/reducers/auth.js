@@ -1,11 +1,18 @@
-const inititalState = localStorage.getItem('isAuth');
+const inititalState = {
+  isAuth:localStorage.getItem('isAuth')
+}
 
 export default function isAuth(state = inititalState, action) {
-  if (action.type === 'LOG_IN') {
-    return true;
-  }
-  if (action.type === 'LOG_OUT') {
-    return false;
-  }
-  return state;
+
+  switch (action.type) {
+    case 'LOG_IN':
+        return true
+        break;
+    case 'LOG_OUT':
+        return false
+        break;
+    default:
+        return state;
+    break;
+}
 }

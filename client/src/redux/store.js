@@ -1,10 +1,10 @@
-import { createStore } from 'redux';
-import reducer from './reducers';
+import { createStore,applyMiddleware } from 'redux';
+import reducer from './reducers/index';
+import thunk from 'redux-thunk';
+import { composeWithDevTools } from 'redux-devtools-extension';
 
 const store = createStore(
-  reducer,
-  // eslint-disable-next-line no-underscore-dangle
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+  reducer,composeWithDevTools(applyMiddleware(thunk))
 );
 
 export default store;
