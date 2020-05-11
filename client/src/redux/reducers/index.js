@@ -1,7 +1,4 @@
 import { combineReducers } from 'redux';
-import isAuth from './auth';
-import news from './news';
+import book from './book';
 
-export default combineReducers({
-  isAuth,news
-});
+export default combineReducers({book});

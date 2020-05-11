@@ -8,8 +8,7 @@ import useRoutes from './hooks/routes.hook';
 
 
 const App = () => {
-  const isAuth = useSelector(state => state.isAuth);
-  const routes = useRoutes(isAuth);
+  const routes = useRoutes();
 
   return (
     <div className="container">

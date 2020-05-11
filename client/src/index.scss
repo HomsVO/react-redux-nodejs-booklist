@@ -1,0 +1,19 @@
+.book {
+  display: flex;
+  justify-content: space-between;
+  width: 49%;
+  font-size: 14px;
+  border: 1px solid #343434;
+  border-radius: 2.5px;
+  padding: 10px;
+  align-items: center;
+  &__author{
+    margin-bottom: 0;
+  }
+  &__title{
+    margin-bottom: 0;
+  }
+  &__completed{
+    margin-bottom: 0;
+  }
+}

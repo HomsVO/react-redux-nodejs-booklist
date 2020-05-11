@@ -1,20 +1,20 @@
 const inititalState = {
-    news:[],
+    books:[],
     loadings:{
-        news:false
+        books:false
     }
 }
   
-export default function isAuth(state = inititalState, action) {
+export default function book(state = inititalState, action) {
     switch (action.type) {
-        case "SET_NEWS":
+        case "SET_BOOKS":
             return {
                 ...state,
-                news:[...action.payload],
+                books:[...action.payload],
               };
             break;
-        case "SET_NEWS_LOADING":
-            state.loadings.news = action.payload;
+        case "SET_BOOKS_LOADING":
+            state.loadings.books = action.payload;
             return {
                 ...state,
               };
