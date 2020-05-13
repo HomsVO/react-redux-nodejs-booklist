@@ -3,9 +3,11 @@ const mongoose = require('mongoose');
 const cfg = require('prj-cfg').getAll();
 const app = express();
 const PORT = process.env.PORT || cfg.PORT || 8000;
+const bookRoutes = require('./routes/book.routes');
 
-
+app.use(express.json());
 app.use(express.static('client/public'));
+app.use('/api', bookRoutes);
 
 const start = async () => {
 
