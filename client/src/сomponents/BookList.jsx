@@ -17,7 +17,7 @@ const BookList = () => {
         <div className="container">
             {!loadings.books && 
                 <div className="w-50 mx-auto" >
-                    {books.map((item) => <BookItem book={item} />)}
+                    {books.map((item, index) => <BookItem key={index} book={item} />)}
                     {!books.length && <p>Книг нет</p>}
                 </div>
             }

@@ -1,6 +1,7 @@
 import React from 'react';
 
-const BookItem = (book) => {
+const BookItem = ({ book }) => {
+
     return (
         <div className="book mb-3">
             <p className="book__author">{book.author}</p>

@@ -9,14 +9,29 @@ router.get('/books', async (req, res) => {
     res.json(books);
 
 })
-router.post('/book/c', async (req, res) => {
+router.post('/book/add', async (req, res) => {
     
     const { author, title } = req.body;
     const book = new Book({author, title});
     book.save();
 
     const books = await Book.find({});
+    console.log(books);
+    res.json(books);
+})
 
+router.post('/book/complete', async (req, res) => {
+    
+    const { completed, id } = req.body;
+
+    const book = await Book.findOne({ id });
+    if(!book){
+        return res.status(400).json({message:"Book not found"});
+    }
+    book.completed = completed;
+    book.save();
+
+    const books = await Book.find({});
     res.json(books);
 })
 

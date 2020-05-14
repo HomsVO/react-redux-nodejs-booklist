@@ -13,12 +13,19 @@ export const setBooksLoading = (loading) => {
     }
 }
 
+export const addBookRequest = data => dispatch => {
+    axios.post('/api/book/add', data)
+        .then(res => dispatch(setBooks(res.data)))
+        .catch(err => console.log(err))
+}
 
 export const fetchBooks = () => async dispatch => {
     dispatch(setBooksLoading(true));
     await axios.get('/api/books')
-        .then(res => dispatch(setBooks(res.data)))
+        .then(res => {
+            console.log(res.data);
+            dispatch(setBooks(res.data))
+        })
         .catch(err => console.log(err))
-
     dispatch(setBooksLoading(false));
 }
