@@ -3,10 +3,9 @@ import BookList from '../сomponents/BookList';
 
 const BooksPage = () => {
 
-
-    return (
+  return (
       <div className="container">
-        <h1 className='mt-3'>books</h1>
+        <h1 className='mt-3 text-center'>Books</h1>
         <BookList />
       </div>
     );

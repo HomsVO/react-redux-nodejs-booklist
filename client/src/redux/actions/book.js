@@ -39,11 +39,14 @@ export const completeBookRequest = data => dispatch => {
 
 export const fetchBooks = () => async dispatch => {
     dispatch(setBooksLoading(true));
-    await axios.get('/api/books')
+    axios.get('/api/books')
         .then(res => {
-            console.log(res.data);
             dispatch(setBooks(res.data))
+            dispatch(setBooksLoading(false));
         })
-        .catch(err => console.log(err))
-    dispatch(setBooksLoading(false));
+        .catch(err => {
+            console.log(err)
+            dispatch(setBooksLoading(false));
+        })
+
 }

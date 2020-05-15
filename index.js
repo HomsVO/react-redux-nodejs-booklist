@@ -7,15 +7,14 @@ const bookRoutes = require('./routes/book.routes');
 
 app.use(express.json());
 app.use(express.static('client/public'));
+
 app.use('/api', bookRoutes);
 
 const start = async () => {
-
     try {
         await mongoose.connect(cfg.DBUrl, {
             useNewUrlParser: true,
             useUnifiedTopology: true
-            
         });
         app.listen(PORT, () => {
             console.log('Server has been started on PORT:' + PORT)
@@ -23,7 +22,6 @@ const start = async () => {
     } catch (e) {
         console.log(e);
     }
-
 }
 
 start();

@@ -1,26 +1,19 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import BookItem from './BookItem';
-import { useSelector, useDispatch } from 'react-redux';
-import { fetchBooks } from '../redux/actions/book'
+import { useSelector } from 'react-redux';
+import Loader from './Loader';
 
 const BookList = () => {
 
     const { books, loadings } = useSelector(state => state.book);
-    const dispatch = useDispatch();
-  
-    useEffect(() => {
-      dispatch(fetchBooks());
-    }, []);
-  
 
     return (
         <div className="container">
-            {!loadings.books && 
-                <div className="w-50 mx-auto" >
-                    {books.map((item, index) => <BookItem key={index} book={item} />)}
-                    {!books.length && <p>Книг нет</p>}
-                </div>
-            }
+            <div className="w-50 mx-auto" >
+                {loadings.books && <Loader />}
+                {!loadings.books && books.map((item, index) => <BookItem key={index} book={item} />)}
+                {!loadings.books && !books.length && <p>Books not found</p>}
+            </div>
         </div>
     )
 }

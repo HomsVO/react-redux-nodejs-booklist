@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 function Header() {
   return (
@@ -8,10 +8,10 @@ function Header() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto">
             <li className="nav-item">
-              <Link className="nav-link" activeClassName="nav-link active" exact to="/">Books</Link>
+              <NavLink className="nav-link" activeClassName="active" exact to="/">Books</NavLink>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" activeClassName="nav-link active" exact to="/add">Add</Link>
+              <NavLink className="nav-link" activeClassName="active" exact to="/add">Add</NavLink>
             </li>
           </ul>
         </div>

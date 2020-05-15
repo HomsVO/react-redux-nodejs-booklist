@@ -2,10 +2,10 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { completeBookRequest } from './../redux/actions/book';
 const BookItem = ({ book }) => {
+    
     const dispatch = useDispatch();
 
     const completeBook = () => {
-        console.log(book)
         dispatch(completeBookRequest({
             completed: !book.completed,
             _id: book._id
