@@ -16,15 +16,15 @@ router.post('/book/add', async (req, res) => {
     book.save();
 
     const books = await Book.find({});
-    console.log(books);
+    
     res.json(books);
 })
 
 router.post('/book/complete', async (req, res) => {
     
-    const { completed, id } = req.body;
+    const { completed, _id } = req.body;
 
-    const book = await Book.findOne({ id });
+    const book = await Book.findOne({ _id });
     if(!book){
         return res.status(400).json({message:"Book not found"});
     }
