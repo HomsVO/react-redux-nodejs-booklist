@@ -9,7 +9,7 @@ const BookList = () => {
 
     return (
         <div className="container">
-            <div className="w-50 mx-auto" >
+            <div className="w-75 mx-auto" >
                 {loadings.books && <Loader />}
                 {!loadings.books && books.map((item, index) => <BookItem key={index} book={item} />)}
                 {!loadings.books && !books.length && <p>Books not found</p>}

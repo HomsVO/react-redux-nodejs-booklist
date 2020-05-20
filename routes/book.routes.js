@@ -29,7 +29,37 @@ router.post('/book/complete', async (req, res) => {
         return res.status(400).json({message:"Book not found"});
     }
     book.completed = completed;
-    book.save();
+    await book.save();
+
+    const books = await Book.find({});
+    res.json(books);
+})
+router.post('/book/d', async (req, res) => {
+    
+    const { _id } = req.body;
+
+    const book = await Book.findOne({ _id });
+    if(!book){
+        return res.status(400).json({message:"Book not found"});
+    }
+    await book.remove();
+
+    const books = await Book.find({});
+    res.json(books);
+})
+
+router.post('/book/u', async (req, res) => {
+    
+    const newData = req.body;
+
+    const book = await Book.findOne({ _id });
+    if(!book){
+        return res.status(400).json({message:"Book not found"});
+    }
+
+    book = newData;
+       
+    await book.save();
 
     const books = await Book.find({});
     res.json(books);
