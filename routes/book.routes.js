@@ -1,7 +1,6 @@
 const router = require('express').Router();
 const Book = require('./../models/Book');
 
-
 router.get('/books', async (req, res) => {
     
     const books = await Book.find({});
@@ -52,14 +51,13 @@ router.post('/book/u', async (req, res) => {
     
     const newData = req.body;
 
-    const book = await Book.findOne({ _id });
+    const book = await Book.findOne({ _id:newData._id });
+
     if(!book){
         return res.status(400).json({message:"Book not found"});
     }
 
-    book = newData;
-       
-    await book.save();
+    await book.update(newData);
 
     const books = await Book.find({});
     res.json(books);

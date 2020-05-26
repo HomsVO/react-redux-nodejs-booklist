@@ -6,7 +6,7 @@ const PORT = process.env.PORT || cfg.PORT || 8000;
 const bookRoutes = require('./routes/book.routes');
 
 app.use(express.json());
-app.use(express.static('client/public'));
+app.use(express.static('client/build'));
 
 app.use('/api', bookRoutes);
 
